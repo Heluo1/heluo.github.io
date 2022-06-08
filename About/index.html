@@ -1,0 +1,240 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>About | Heluoの小屋</title>
+        <meta name="author" content="Heluo">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="icon" href="https://s2.loli.net/2022/05/15/5XnbWCf2e4FylHm.jpg">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+    <meta name="generator" content="Hexo 6.2.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">Heluoの小屋</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;home</span>
+        </a>
+        
+        <a href="/About">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;tags</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;Heluoの小屋</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="/">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">home</div>
+                </div>
+            </a>
+            
+            <a href="/About">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                </div>
+            </a>
+            
+            <a href="/archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">archives</div>
+                </div>
+            </a>
+            
+            <a href="/categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">categories</div>
+                </div>
+            </a>
+            
+            <a href="/tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">tags</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        
+<div class="article">
+    <div>
+        <h1>About </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/5/16
+        </span>
+        
+        
+    </div>
+    <div class="content" v-pre>
+        <h1>你好，我叫<strong>Heluo</strong>😄</h1>
+<h2 id="很高兴认识你！！！！">很高兴认识你！！！！</h2>
+<hr>
+<p><code>这样应该可以吧？嗯！就这样介绍了。达咩！这样的话也太少了吧，还是再加亿点点吧</code>🦊</p>
+<h1>Me👤</h1>
+<p>一个怀抱着热忱之心不甘于屈服于命运的大学生，此博客的搭建者。梦想是夏日里铺上凉席，手抱西瓜吹着风扇，然后看着电视里的奥特曼嘿嘿嘿，这种场景从小到大只有过一次来着。还有就是目前正在钻研设计方面的知识，为了成为一名设计师正在努力中…但是我感觉自己的动手能力好差啊，每次在脑海里有了想法，打开ps的时候一下子就不知道怎么弄了 ，这是一个很令人头疼的问题，或许是软件不够熟练亦或是想法不完整不成熟。这些问题我都在改善中…不过完事开头难，只要不放弃终会找到路！</p>
+<h1>hobbies🌈</h1>
+<p>🎯 我喜欢游戏，喜欢单机游戏例如原神和刺客信条</p>
+<p>🎼 音乐是我放松身心的一种方式，风格喜欢凯尔特风格和摇滚</p>
+<p>📖 我正在养成一个看书的好习惯，这能让我更加的聪明</p>
+<p>💲我的终极爱好就是有数不完的钱，即使这很俗，但没人能拒绝的了吧</p>
+<hr>
+<h1>Contact💬</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">联系方式</th>
+<th style="text-align:center">地址</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">QQ</td>
+<td style="text-align:center">3539747324</td>
+</tr>
+<tr>
+<td style="text-align:center">酷安</td>
+<td style="text-align:center">by@stapky</td>
+</tr>
+<tr>
+<td style="text-align:center">github</td>
+<td style="text-align:center"><a target="_blank" rel="noopener" href="https://github.com/Heluo1">https://github.com/Heluo1</a></td>
+</tr>
+<tr>
+<td style="text-align:center">email</td>
+<td style="text-align:center"><a href="mailto:stapkyhu@gamil.com">stapkyhu@gamil.com</a></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1>最后推荐一部我很喜欢的动漫嘻嘻嘻<img src="/About/index/%E7%8B%BC%E4%B8%8E%E9%A6%99%E8%BE%9B%E6%96%9918.jpg" alt=""></h1>
+<!--狼与香辛料-->
+
+    </div>
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © 2022 - 2022 Heluoの小屋
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @Heluo
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
+                target="_blank" rel="noopener" href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        
+    </div>
+</footer>
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/js/particlex.js"></script>
+        <script src="/js/showimg.js"></script>
+        
+
+        <canvas
+         <canvas class="fireworks" style="position: fixed; left: 0; top: 0; z-index: 1; pointer-events: none;" ></canvas> <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> <script type="text/javascript" src="/js/fireworks.js"></script> 
+        <canvas
+    id="background"
+    style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:-1"
+></canvas>
+<script src="/js/background.js"></script>
+<link rel="stylesheet" href="/xxx.css">
+    <link rel="stylesheet" href="/css/iconfont.css">
+ <script src="xxxx"></script>
+</script>
+    </body>
+</html>
+<!--JS-->
+<script src="/<fireworks.js>"></script>
+<script src="/<background.js>"></script> 
+<script src="/<live2d.min.js>"></script>     
+    <!--CSS-->
+    <link rel="stylesheet" href="/<>" />
+
+  
+
+
